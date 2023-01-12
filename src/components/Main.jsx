@@ -63,7 +63,7 @@ function Main() {
   return (
     <div className='basis-4/5 md:p-5 bg-neutral-900'>
         <div className='md:mx-10 m-2 text-white'>
-            <div className='md:flex items-center justify-between'>
+            <div className='md:flex items-center justify-between inline-flex gap-10'>
                 <span>TV Shows</span>
                 <span className='font-bold border-b-2 text-blue-500'>Movies</span>
                 <span>Anime</span>
