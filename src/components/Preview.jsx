@@ -10,7 +10,6 @@ function Preview() {
     const navigate = useNavigate()
 
     const [movies,setMovies] = useState([]);
-    const [isLoading,setIsLoading] = useState(true)
 
     const API = `https://api.themoviedb.org/3/movie/${movID}/videos?api_key=${env.API_KEY}&language=en-US`
     useEffect(()=>{
@@ -19,13 +18,11 @@ function Preview() {
         .then((res)=>res.json())
         .then((data)=> {
             setMovies(data.results[0]) 
-            setIsLoading(false)
             // console.log(data.results[0])
         })
         .catch((err)=>{console.log(err)})
 
-        console.log(movies)
-    },[])
+    },[API])
 
 
   return (
@@ -44,7 +41,7 @@ function Preview() {
         </div>
         {/* Moview Prev */}
         <div className='overflow-hidden rounded-lg relative md:w-full md:mb-5'>
-            <iframe height="300" className='md:w-full w-full md:h-[700px]'
+            <iframe title='preview' height="300" className='md:w-full w-full md:h-[700px]'
                 src={`https://www.youtube.com/embed/${movies.key}?autoplay=1&loop=1`}>
             </iframe>
         </div>

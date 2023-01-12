@@ -4,7 +4,7 @@ import {FaSearch} from 'react-icons/fa'
 import env from "react-dotenv";
 
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Splide} from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 
 import MovieCard from './MovieCard'
@@ -28,14 +28,15 @@ function NewMovies({mov}) {
 }
 
 function Main() {
-    const API = `https://api.themoviedb.org/3/movie/popular?api_key=${env.API_KEY}&language=en-US&page=1`
+    const API = `https://api.themoviedb.org/3/movie/popular?api_key=${env.REACT_APP_API_KEY}&language=en-US&page=1`
     const [movies,setMovies] = useState([]);
     const [newMov,setNewMov] =  useState()
     const [isLoading,setIsLoading] = useState(true)
+    console.log(process.env)
 
     // new release fetchAPI
     const newMovies = ()=>{
-        let api = `https://api.themoviedb.org/3/movie/popular?api_key=${env.API_KEY}&language=en-US&page=2`
+        let api = `https://api.themoviedb.org/3/movie/popular?api_key=${env.REACT_APP_API_KEY}&language=en-US&page=2`
         fetch(`${api}`)
         .then((res)=>res.json())
         .then((data)=> {
@@ -56,17 +57,16 @@ function Main() {
 
         newMovies()
 
-        console.log(movies)
-    },[])
+    },[API])
 
 
   return (
     <div className='basis-4/5 md:p-5 bg-neutral-900'>
         <div className='md:mx-10 m-2 text-white'>
             <div className='md:flex items-center justify-between'>
-                <a href="" >TV Shows</a>
-                <a href="" className='font-bold border-b-2 text-blue-500'>Movies</a>
-                <a href="">Anime</a>
+                <span>TV Shows</span>
+                <span className='font-bold border-b-2 text-blue-500'>Movies</span>
+                <span>Anime</span>
                 <form className='md:flex hidden items-center basis-10 bg-transparent border-1 w-full p-1 rounded'>
                     <FaSearch/><input type="search" className='bg-transparent w-100 focus:outline-none mx-1'/>
                 </form>

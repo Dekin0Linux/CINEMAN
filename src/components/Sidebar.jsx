@@ -11,16 +11,16 @@ function Sidebar() {
             <h3 className='text-current md:my-4'>MENU</h3>
             <div className='flex md:block justify-between'>
                 <div className='flex items-center my-3'>
-                    <FaHome size={20} color={'blue'}/><a href='#' className='md:mx-7 font-light hidden md:block'>Home</a>
+                    <FaHome size={20} color={'blue'}/><span className='md:mx-7 font-light hidden md:block'>Home</span>
                 </div>
                 <div className='flex items-center my-3'>
-                    <FaUser size={20} color={''} /><a href='#' className='md:mx-7 font-light hidden md:block'>Community</a>
+                    <FaUser size={20} color={''} /><span className='md:mx-7 font-light hidden md:block'>Community</span>
                 </div>
                 <div className='flex items-center my-3'>
-                    <FaSearch size={20} color={''}/><a href='#' className='md:mx-7 font-light hidden md:block'>Discovery</a>
+                    <FaSearch size={20} color={''}/><span className='md:mx-7 font-light hidden md:block'>Discovery</span>
                 </div>
                 <div className='flex items-center my-3'>
-                    <FaClock size={20} color={''} /><a href="" className='md:mx-7 font-light hidden md:block'>Coming Soon</a>
+                    <FaClock size={20} color={''} /><span className='md:mx-7 font-light hidden md:block'>Coming Soon</span>
                 </div>
             </div>
             
@@ -29,13 +29,13 @@ function Sidebar() {
         <div className='mb-10 hidden md:block'>
             <h3 className='text-current my-4'>MY PROFILE</h3>
             <div className='flex items-center my-3'>
-                <FaHeart size={20} color={''}/><a href='#' className='mx-7 font-light'>Favorite</a>
+                <FaHeart size={20} color={''}/><span className='mx-7 font-light'>Favorite</span>
             </div>
             <div className='flex items-center my-3'>
-                <FaClone size={20} color={''}/><a href='#' className='mx-7 font-light'>Recently Watched</a>
+                <FaClone size={20} color={''}/><span className='mx-7 font-light'>Recently Watched</span>
             </div>
             <div className='flex items-center my-3'>
-                <FaSearch size={20} color={''}/><a href='#' className='mx-7 font-light'>Continue Watching</a>
+                <FaSearch size={20} color={''}/><span className='mx-7 font-light'>Continue Watching</span>
             </div>
         </div>
 
