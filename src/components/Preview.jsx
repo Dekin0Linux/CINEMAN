@@ -22,7 +22,7 @@ function Preview() {
         })
         .catch((err)=>{console.log(err)})
 
-    },[])
+    },[API])
 
 
   return (
