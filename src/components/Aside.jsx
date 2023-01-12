@@ -12,7 +12,7 @@ function Aside() {
                 <button className='font-light px-2 py-1 backdrop-blur-sm bg-white/40 text-white rounded-lg shadow-lg'>Watch Now</button>
                 <button className='font-light px-2 py-1 backdrop-blur-sm bg-white/40 text-white rounded-lg shadow-lg mx-1'>2:03</button>
                 <p className='text-white'>Movie Name</p>
-        </div>
+            </div>
         </div>
 
         <div className='overflow-hidden rounded-lg md:w-56 relative h-60 my-5'>

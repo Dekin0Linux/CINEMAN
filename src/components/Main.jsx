@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 
 function NewMovies({mov}) {
   return (
-    <div className='overflow-hidden rounded-lg md:w-56 relative my-2 md:my-0 '>
+    <div className='overflow-hidden rounded-lg md:w-56 relative my-2 md:my-0'>
         <Link to={`/preview/${mov.id}`}>
             <img src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${mov.poster_path}`} alt="" className='hover:scale-125 transition ease-in-out delay-150 duration-75'/>
         </Link>
@@ -127,7 +127,7 @@ function Main() {
             <div className='mt-10'>
                 <h3 className='font-bold'>New Movies</h3>
                 <div className='my-5'>
-                    <div className="md:flex md:flex-wrap md:gap-6 gap-2">
+                    <div className="md:flex md:flex-wrap md:gap-6 grid gap-2 grid-cols-2">
                         {newMov && 
                             newMov.map((movie,index)=> {return(
                                 <NewMovies mov={movie} key={movie.id}/>
