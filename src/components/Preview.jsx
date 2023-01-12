@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {FaPlus, FaHeart, FaShare } from "react-icons/fa";
 
-import env from 'react-dotenv';
+// import env from 'react-dotenv';
 
 import {useNavigate, useParams,Link} from 'react-router-dom'
 
@@ -11,7 +11,7 @@ function Preview() {
 
     const [movies,setMovies] = useState([]);
 
-    const API = `https://api.themoviedb.org/3/movie/${movID}/videos?api_key=${env.API_KEY}&language=en-US`
+    const API = `https://api.themoviedb.org/3/movie/${movID}/videos?api_key=${process.env.API_KEY}&language=en-US`
     useEffect(()=>{
         window.scrollTo(0, 0)
         fetch(`${API}`)

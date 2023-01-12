@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import {FaSearch} from 'react-icons/fa'
 
-import env from "react-dotenv";
+// import env from "react-dotenv";
 
 
 import { Splide} from '@splidejs/react-splide';
@@ -28,7 +28,7 @@ function NewMovies({mov}) {
 }
 
 function Main() {
-    const API = `https://api.themoviedb.org/3/movie/popular?api_key=${env.REACT_APP_API_KEY}&language=en-US&page=1`
+    const API = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`
     const [movies,setMovies] = useState([]);
     const [newMov,setNewMov] =  useState()
     const [isLoading,setIsLoading] = useState(true)
@@ -36,7 +36,7 @@ function Main() {
 
     // new release fetchAPI
     const newMovies = ()=>{
-        let api = `https://api.themoviedb.org/3/movie/popular?api_key=${env.REACT_APP_API_KEY}&language=en-US&page=2`
+        let api = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=2`
         fetch(`${api}`)
         .then((res)=>res.json())
         .then((data)=> {
