@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import {SplideSlide } from '@splidejs/react-splide';
 
 import '@splidejs/react-splide/css';
 import { Link} from 'react-router-dom';
