@@ -11,7 +11,7 @@ function Preview() {
 
     const [movies,setMovies] = useState([]);
 
-    const API = `https://api.themoviedb.org/3/movie/${movID}/videos?api_key=${process.env.API_KEY}&language=en-US`
+    const API = `https://api.themoviedb.org/3/movie/${movID}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
     useEffect(()=>{
         window.scrollTo(0, 0)
         fetch(`${API}`)
@@ -22,7 +22,7 @@ function Preview() {
         })
         .catch((err)=>{console.log(err)})
 
-    },[API])
+    },[])
 
 
   return (
