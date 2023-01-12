@@ -29,13 +29,13 @@ function Preview() {
     <div className='bg-neutral-900 w-full text-white p-5 md:px-10'>
         {/* top bar */}
         <div className='md:flex justify-between my-2'>
-            <h1 className='font-bold text-lg md:mb-2' onClick={()=>{navigate('/')}}>CINE<span className='text-blue-500'>MAN</span></h1>
-            <div className='md:flex md:gap-7'>
+            <h1 className='font-bold text-lg md:mb-2 text-center md:text-left' onClick={()=>{navigate('/')}}>CINE<span className='text-blue-500'>MAN</span></h1>
+            <div className='md:flex md:gap-7 flex flex-wrap gap-4 '>
                 <Link to={'/'}>Home</Link>
-                <p>Top Rated</p>
-                <p>Popular</p>
-                <p>Dicovery</p>
-                <p>Coming Soon</p>
+                <p className='hover:bg-blue-700 hover:rounded-sm hover:p-1'>Top Rated</p>
+                <p className='hover:bg-blue-700 hover:rounded-sm hover:p-1'>Popular</p>
+                <p className='hover:bg-blue-700 hover:rounded-sm hover:p-1'>Dicovery</p>
+                <p className='hover:bg-blue-700 hover:rounded-sm hover:p-1'>Coming Soon</p>
             </div>
             <div></div>
         </div>
