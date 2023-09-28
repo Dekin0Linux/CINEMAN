@@ -15,7 +15,7 @@ function MovieCard({mov}) {
                 </Link>
 
                 <div className='backdrop-blur-md bg-white/10 p-2 absolute bottom-0 w-full'>
-                    <p className='font-semibold'>{mov.title}</p>
+                    <p className='font-semibold truncate'>{mov.title}</p>
                     <small>{mov.release_date}</small>
                 </div>
             </div>
