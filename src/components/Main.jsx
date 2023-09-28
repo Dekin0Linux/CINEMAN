@@ -20,7 +20,7 @@ function NewMovies({mov}) {
             <img src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${mov.poster_path}`} alt="" className='hover:scale-125 transition ease-in-out delay-150 duration-75'/>
         </Link>
         <div className='backdrop-blur-md bg-white/10 p-2 absolute bottom-0 w-full'>
-            <p className='font-semibold'>{mov.title}</p>
+            <p className='font-semibold truncate'>{mov.title}</p>
             <small>{mov.release_date}</small>
         </div>
     </div>
