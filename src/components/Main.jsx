@@ -35,7 +35,7 @@ function Main() {
 
     // new release fetchAPI
     const newMovies = ()=>{
-        let num = Math.floor(Math.random()*3)
+        let num = Math.floor(Math.random()*3 + 1)
         let api = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${num}`
         fetch(`${api}`)
         .then((res)=>res.json())
